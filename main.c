@@ -48,3 +48,25 @@ void visualizzaMenu(int sudoku[][DIM], int sudokuIn[][DIM]){
 	}while(scelta < 0 || scelta > 6);
 
 }
+
+void creaMat(int sudokuIn[][DIM], char schema[]){
+	int i, j, k;
+
+	k = 0;
+
+	for(i = 0; i < DIM; i++)
+		for(j = 0; j < DIM; j++){
+			sudokuIn[i][j] = (int)schema[k];
+			k++;
+		}
+}
+
+void inizializzaSudoku(int sudoku[][DIM], int sudokuIn[][DIM]){
+	int i, j;
+
+	for(i = 0; i < DIM; i++)
+		for(j = 0; j < DIM; j++)
+			sudoku[i][j] = sudokuIn[i][j];
+}
+
+void stampaSudoku()

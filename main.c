@@ -69,4 +69,19 @@ void inizializzaSudoku(int sudoku[][DIM], int sudokuIn[][DIM]){
 			sudoku[i][j] = sudokuIn[i][j];
 }
 
-void stampaSudoku()
+void stampaSudoku(int sudoku[][DIM], int sudokuIn[][DIM]){
+	int i, j;
+
+	/*continuare*/
+
+	printf("+----------+----------+----------+\n");
+	for(i = 0; i < DIM; i++){
+		printf("| ");
+		for(j = 0; j < DIM; j++){
+			if(sudokuIn[i][j] = 0)
+				printf(" ");
+			else
+				printf("%d%c", sudokuIn[i][j], '*');
+		}
+	}
+}

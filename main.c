@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include "baglieri.h"
+#include "alberti.h"
+#include "bertelli.h"
 
 #define DIM 9
 #define LEN DIM*DIM
 
 void creaMat(int[][], char[]);
-int check(int[][], char[]);
+int check(int[][]);
 void inizializzaSudoku(int[][], int[][]);
 void stampaSudoku(int[][], int[][]);
 void visualizzaMenu(int[][], int[][]);
@@ -19,7 +22,7 @@ int main(int argc, char*argv[])
 		printf("Inserisci lo schema iniziale: ");
 		gets(schema);
 		creaMat(sudokuIn, schema);
-	}while(!check(sudokuIn, schema));
+	}while(!check(sudokuIn));
 
 	inizializzaSudoku(sudoku, sudokuIn);
 	stampaSudoku(sudoku, sudokuIn);
